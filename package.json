@@ -1,0 +1,44 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "lint": "eslint ./pub/testt.js",
+    "lint:fix": "eslint ./pub/testt.js --fix",
+    "test": "eslint ./pub/testt.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.0",
+    "husky": "^3.1.0",
+    "jquery": "^3.4.1",
+    "lint-staged": "^9.5.0",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.13",
+    "nodemon": "^2.0.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "plugin": "^0.3.3",
+    "prettier": "^1.19.1",
+    "pug": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
+}

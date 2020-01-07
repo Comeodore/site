@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    ul.list-group
+        each val in articles
+            li.list-group-item
+                a(href="/articles/"+val._id)= val.title

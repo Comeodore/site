@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= article.title
+    p= article.author
+    p= article.body
+    hr
+    a.btn.btn-primary(href='/articles/edit/'+article._id style="text-decoration: none") Edit
+    a.btn.btn-danger(href='#' style="text-decoration: none" id=article._id class="delete-art")  Delete
+
+
