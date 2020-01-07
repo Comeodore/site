@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 80;
 // process.env.PORT || 80
 
+process.env.MONGODB_URI = 'mongodb+srv://vova:1q2w3e@cluster0-pkydx.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // process.env.MONGODB_URI
