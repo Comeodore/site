@@ -1,74 +1,72 @@
 const express = require('express');
+
 const router = express.Router();
 
-let Art = require('../models/art');
+const Art = require('../models/art');
 
-router.get('/add', function (req, res) {
-    res.render('add_article', {
-        title: 'Add article'
-    })
+router.get('/add', (req, res) => {
+  res.render('add_article', {
+    title: 'Add article',
+  });
 });
 
-router.post('/add', function (req, res) {
-    let article = new Art;
-    article.title = req.body.title;
-    article.author = req.body.author;
-    article.body = req.body.body;
+router.post('/add', (req, res) => {
+  const article = new Art();
+  article.title = req.body.title;
+  article.author = req.body.author;
+  article.body = req.body.body;
 
-    article.save(function (err) {
-        if (err){
-            console.log(err);
-            return;
-        } else {
-            res.redirect('/');
-        }
-
-    })
+  article.save((err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect('/');
+    }
+  });
 });
 
-router.get('/edit/:id', function (req, res) {
-    Art.findById(req.params.id, function (err, article) {
-        res.render('edit_article', {
-            article:article
-        })
-    })
+router.get('/edit/:id', (req, res) => {
+  Art.findById(req.params.id, (err, article) => {
+    res.render('edit_article', {
+      article,
+    });
+  });
 });
 
-router.post('/edit/:id', function (req, res) {
-    let article = {};
-    article.title = req.body.title;
-    article.author = req.body.author;
-    article.body = req.body.body;
+router.post('/edit/:id', (req, res) => {
+  const article = {};
+  article.title = req.body.title;
+  article.author = req.body.author;
+  article.body = req.body.body;
 
-    let query = {_id:req.params.id};
+  const query = { _id: req.params.id };
 
-    Art.update(query, article, function (err) {
-        if (err){
-            console.log(err);
-            return;
-        } else {
-            res.redirect('/');
-        }
-    })
+  Art.update(query, article, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect('/');
+    }
+  });
 });
 
-router.delete('/:id', function (req, res) {
-    let query = {_id:req.params.id};
+router.delete('/:id', (req, res) => {
+  const query = { _id: req.params.id };
 
-    Art.remove(query, function (err) {
-        if (err){
-            console.log(err);
-        }
-        res.send('Success')
-    })
+  Art.remove(query, (err) => {
+    if (err) {
+      console.log(err);
+    }
+    res.send('Success');
+  });
 });
 
-router.get('/:id', function (req, res) {
-    Art.findById(req.params.id, function (err, ar) {
-        res.render('article', {
-            article: ar
-        })
-    })
+router.get('/:id', (req, res) => {
+  Art.findById(req.params.id, (err, ar) => {
+    res.render('article', {
+      article: ar,
+    });
+  });
 });
 
 module.exports = router;

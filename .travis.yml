@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-- node
+  - node
 script:
+  - npm run test
+notifications:
+  email: false
 deploy:
   provider: heroku
   api_key: $api_key
