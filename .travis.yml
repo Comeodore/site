@@ -5,9 +5,6 @@ script:
 - npm test
 deploy:
   provider: heroku
-  api_key:
-    secure: itU9w0IXHDnwqb4UuIfyDR+rIFokjCdgIEc//iq/x7Mn0ToQ6pMNoHTXuzPmmTkyjrasqU1OaDFDtzMw1lMnFvygX/wbTvXGABSYSOvtUYxr/qKlHmxxsMqaofXqPBHiPD0cP2z8rWCs+xu6eo3FN7On9G9VEh8Fha7Uwv1vZyFQeJfVjFBZaWTddBHxlqMQipuk8UBC0ssw8XNrP+kWaehLU+Jhg/Mx3PNdWabFZkrfZ4+jjvMsIaJNC6qHDL4pxGCydZ9HN7TlOfIF9ciAZdC3quHFTp4T+dc3MNLGxqqIMKSBdqJPGl2otHpr9tbxzBhWbz4L1hRQD45wvJ4LfsRDsq0wLi6jw+b8q2MVkD//0x0h0bMf+CaI3vPoSaRlJo1zumhrnyf7aeXtSjpyKH4rCZtSbrib3CYkA9TDv4173Zdq5hY1pJPWrdMr+XD0PEDMg0c9OMZQiwyZLBeN6/4NieD+ObJusYUlzFSqV+jPAZKFBF12c8AK5gBZkKUyovwjbIC+/IM4Y2WJm3BzFzoRlOMti9wLZN8cOBIUDpUCrDf9t7uRfXgfeNwhwNHJdo8MY7F2CsnTz2Z//X7fxpYosP+XPZyDyjWSdTQDP4AF66JtDvmdfEFcOoUo9Kjm5k2FRwjV9Vl64eA49apUPwpKOE9WUIvrz2Tbnver32Q=
-  app: evening-coast-40943
-  on:
-    repo: alexfilatov2000/mongooseL
+  api_key: $api_key
+  app: fast-plateau-81895
 
