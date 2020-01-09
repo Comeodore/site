@@ -12,14 +12,18 @@ mongoose.connect('mongodb+srv://vova:1q2w3e@cluster0-pkydx.mongodb.net/test?retr
 // mongodb://localhost:27017/
 
 const db = mongoose.connection;
-
-db.once('open', () => {
-  console.log('connected to Mongodb');
-});
-
-db.on('error', (err) => {
-  console.log(err);
-});
+try
+{
+  db.once('open', () => {
+    console.log('connected to Mongodb');
+  });
+}
+catch
+{
+  db.on('error', (err) => {
+    console.log(err);
+  });
+}
 
 const ap = express();
 
@@ -38,8 +42,6 @@ ap.use(express.static(path.join(__dirname, 'pub')));
 
 
 ap.get('/', (request, response) => {
-// eslint-disable-next-line max-len
-// response.end('<div><ul><li><a href="/">home</a></li><li><a href="/about">about</a></li></ul><h1>Home page</h1></div>');
 
   Art.find({}, (err, res) => {
     if (err) {

@@ -4,12 +4,6 @@ const router = express.Router();
 
 const Art = require('../models/art');
 
-router.get('/add', (req, res) => {
-  res.render('add_article', {
-    title: 'Add article',
-  });
-});
-
 router.post('/add', (req, res) => {
   const article = new Art();
   article.title = req.body.title;

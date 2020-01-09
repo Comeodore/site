@@ -1,8 +1,12 @@
 extends layout
 
 block content
-    h1= article.title
+    h1 Данные о студенте
+    p Имя студента:
+    p= article.title
+    p Группа студента:
     p= article.author
+    p Средний бал студента
     p= article.body
     hr
     a.btn.btn-primary(href='/articles/edit/'+article._id style="text-decoration: none") Edit
