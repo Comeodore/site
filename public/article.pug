@@ -2,14 +2,12 @@ extends layout
 
 block content
     h1 Данные о студенте
-    p Имя студента:
-    p= article.title
-    p Группа студента:
-    p= article.author
-    p Средний бал студента:
-    p= article.body + 'Средний бал студента:'
     hr
-    a.btn.btn-primary(href='/articles/edit/'+article._id style="text-decoration: none") Edit
-    a.btn.btn-danger(href='#' style="text-decoration: none" id=article._id class="delete-art")  Delete
+    p= 'Имя студента:' + article.title
+    p= 'Группа студента:' + article.author
+    p= 'Средний бал студента:' + article.body
+    hr
+    a.btn.btn-primary(href='/articles/edit/'+article._id style="text-decoration: none") Изменить
+    a.btn.btn-danger(href='#' style="text-decoration: none" id=article._id class="delete-art") Удалить
 
 
