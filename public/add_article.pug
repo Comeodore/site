@@ -1,8 +1,9 @@
 extends layout
 
 block content
+    hr
     h1 Добавить студента
-
+    hr
     form(method="POST", action="/articles/add")
         .form-group
             label Имя студента:
@@ -13,6 +14,6 @@ block content
         .form-group
             label Средний бал студента:
             input.form-control(type="text", name="body")
-
+    hr
         input.btn-primary(type="submit", value="Подтвердить")
 
