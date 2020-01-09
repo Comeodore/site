@@ -5,13 +5,13 @@ block content
 
     form(method="POST", action="/articles/add")
         .form-group
-            label Title:
+            label Имя студента:
             input.form-control(type="text", name="title")
         .form-group
-            label Author:
+            label Группа студента:
             input.form-control(type="text", name="author")
         .form-group
-            label Body:
+            label Средний бал студента:
             input.form-control(type="text", name="body")
 
         input.btn-primary(type="submit", value="Submit")

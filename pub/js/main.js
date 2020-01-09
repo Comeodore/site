@@ -1,13 +1,14 @@
+// eslint-disable-next-line no-undef
 $('.delete-art').click(function () {
-    const id = $(this).attr('id');
+  const id = $(this).attr('id');
 
-    $.ajax({
-		method: 'DELETE',
-	    url: '/articles/'+id,
+  $.ajax({
+    method: 'DELETE',
+    url: `/articles/${id}`,
 
-	    success: function(res){
-			alert('Article was delete');
-			window.location.href = '/';
-	    }
-    });
+    success(res) {
+      alert('Информация о студенте была удалена');
+      window.location.href = '/';
+    },
+  });
 });
