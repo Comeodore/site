@@ -54,10 +54,8 @@ ap.get('/', (request, response) => {
 });
 
 const articles = require('./routes/articles');
-const users = require('./routes/users');
 
 ap.use('/articles', articles);
-ap.use('/users', users);
 
 
 ap.listen(PORT);
