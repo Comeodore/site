@@ -6,8 +6,8 @@ block content
     p= article.title
     p Группа студента:
     p= article.author
-    p Средний бал студента
-    p= article.body
+    p Средний бал студента:
+    p= article.body + 'Средний бал студента:'
     hr
     a.btn.btn-primary(href='/articles/edit/'+article._id style="text-decoration: none") Edit
     a.btn.btn-danger(href='#' style="text-decoration: none" id=article._id class="delete-art")  Delete
