@@ -4,12 +4,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 80;
-// process.env.PORT || 80
 
 mongoose.connect('mongodb+srv://vova:1q2w3e@cluster0-pkydx.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// process.env.MONGODB_URI
-// mongodb://localhost:27017/
 
 const db = mongoose.connection;
 try
