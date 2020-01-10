@@ -10,6 +10,12 @@ router.get('/add', (req, res) => {
   });
 });
 
+router.get('/add', (req, res) => {
+  res.render('2lab', {
+    title: '2 lab',
+  });
+});
+
 router.post('/add', (req, res) => {
   const article = new Art();
   article.title = req.body.title;
