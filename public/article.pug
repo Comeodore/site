@@ -6,7 +6,7 @@ block content
     hr
     p= 'Имя студента: ' + article.title
     p= 'Группа студента: ' + article.author
-    p= 'Информация о студенте: ' + article.body
+    p= 'Средний бал студента: ' + article.body
     hr
     a.btn.btn-primary(href='/articles/edit/'+article._id style="text-decoration: none") Изменить
     a.btn.btn-danger(href='#' style="text-decoration: none" id=article._id class="delete-art") Удалить
