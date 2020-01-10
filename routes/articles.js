@@ -15,6 +15,11 @@ router.post('/2lab', (req, res) => {
     title: '2 lab',
   });
 });
+router.get('/2lab', (req, res) => {
+  res.render('2lab', {
+    title: '2 lab',
+  });
+});
 
 router.post('/add', (req, res) => {
   const article = new Art();
