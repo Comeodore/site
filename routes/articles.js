@@ -10,7 +10,7 @@ router.get('/add', (req, res) => {
   });
 });
 
-router.get('/add', (req, res) => {
+router.get('/2lab', (req, res) => {
   res.render('2lab', {
     title: '2 lab',
   });
